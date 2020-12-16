@@ -1,8 +1,56 @@
+body{
+  /* add background img */
+}
+
 .header {
-    padding: 60px;
-    text-align: center;
-    background: #e2c5b6;
-    color: white;
-    font-size: 30px;
-  }
-  
+  padding: 10px;
+  text-align: center;
+  background: #e2c5b6;
+  color: white;
+  font-size: 30px;
+  opacity: 1;
+}
+
+.search input {
+  background-color: #f7e8e1;
+  color: #f2f2f2;
+  padding: 10px 100px;
+  margin-right: 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  height: 25px;
+  border-radius: 25px;
+}
+#farmersMarketList h3 {
+  text-align: center;
+}
+
+#farmersMarketList {
+  background: #775954;
+  list-style: none;
+  float: right;
+  width: 50%;
+  opacity: 0.7;
+  height: 600px;
+  margin: 10px;
+}
+
+#myMap {
+  position: relative;
+  width: 600px; 
+  height: 400px;
+  background-color: #e2c5b6;
+  float: left;
+  margin: 10px;
+}
+
+#chosenMarket {
+  position: relative;
+  width: 600px; 
+  height: 200px;
+  background-color: #a06244;
+  float: left;
+  margin: 10px;
+}
