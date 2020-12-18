@@ -1,7 +1,65 @@
+#myMap {
+  width: 40%;
+  height: 400px;
+  opacity: 0.9;
+  background-color: #cc533e;
+  float: left;
+} 
+
+ #farmersList{
+   opacity: 0.9;
+    float: right;
+    width: 30%;
+    height: 600px;
+    background-color: #cc533e;
+} 
+
+html, body {
+  height:100%;
+  background-image: url("images/sunset.jpg");
+  font-family: Montserrat, sans-serif;
+}
+
+.well {
+  background-color: #ffffee
+}
+
+#content {
+  padding: 25% 25% 5%; 
+  position: relative; 
+}
+
+.search-form {
+  border-radius: 100px 0 0 30px;
+}
+
+.input-group {
+  width:100%;
+}
+
+.input-group-btn {
+  max-width:38px;
+}
+
+#search {
+  border: 1px;
+  width: 500px;
+}
+
+.search-btn {
+  cursor:pointer;
+  border-radius: 0 30px 30px 0; 
+  background-color:#fff;
+  color:#669;
+  
+}
+
+.text-center {
+  color: #fff;
+}
+
 .header {
-    padding: 60px;
-    text-align: center;
-    background: #e2c5b6;
-    color: white;
-    font-size: 30px;
-  }
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
