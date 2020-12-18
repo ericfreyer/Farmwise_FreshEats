@@ -1,56 +1,65 @@
-body{
-  /* add background img */
+#myMap {
+  width: 40%;
+  height: 400px;
+  opacity: 0.9;
+  background-color: #cc533e;
+  float: left;
+} 
+
+ #farmersList{
+   opacity: 0.9;
+    float: right;
+    width: 30%;
+    height: 600px;
+    background-color: #cc533e;
+} 
+
+html, body {
+  height:100%;
+  background-image: url("images/sunset.jpg");
+  font-family: Montserrat, sans-serif;
+}
+
+.well {
+  background-color: #ffffee
+}
+
+#content {
+  padding: 25% 25% 5%; 
+  position: relative; 
+}
+
+.search-form {
+  border-radius: 100px 0 0 30px;
+}
+
+.input-group {
+  width:100%;
+}
+
+.input-group-btn {
+  max-width:38px;
+}
+
+#search {
+  border: 1px;
+  width: 500px;
+}
+
+.search-btn {
+  cursor:pointer;
+  border-radius: 0 30px 30px 0; 
+  background-color:#fff;
+  color:#669;
+  
+}
+
+.text-center {
+  color: #fff;
 }
 
 .header {
-  padding: 10px;
   text-align: center;
-  background: #e2c5b6;
   color: white;
-  font-size: 30px;
-  opacity: 1;
-}
-
-.search input {
-  background-color: #f7e8e1;
-  color: #f2f2f2;
-  padding: 10px 100px;
-  margin-right: 16px;
-  font-size: 12px;
-  border: none;
-  cursor: pointer;
-  width: 300px;
-  height: 25px;
-  border-radius: 25px;
-}
-#farmersMarketList h3 {
-  text-align: center;
-}
-
-#farmersMarketList {
-  background: #775954;
-  list-style: none;
-  float: right;
-  width: 50%;
-  opacity: 0.7;
-  height: 600px;
-  margin: 10px;
-}
-
-#myMap {
-  position: relative;
-  width: 600px; 
-  height: 400px;
-  background-color: #e2c5b6;
-  float: left;
-  margin: 10px;
-}
-
-#chosenMarket {
-  position: relative;
-  width: 600px; 
-  height: 200px;
-  background-color: #a06244;
-  float: left;
-  margin: 10px;
+  font-size: 25px;
 }
