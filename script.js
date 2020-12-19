@@ -24,13 +24,16 @@ $(document).ready(function () {
         $("#farmersList").append(div)
         
 
-console.log(response.results.length)
-        var newBtn = $("<button>")
+
+        
+
         for (let i = 0; i < response.results.length; i++) {
-            (newBtn).attr("id", "farm-list")
-            $("#div").append(newBtn)   
-            $("#farm-list").text(response.results[i].marketname)
-        }
+           var newBtn = $("<button>").attr("class", "farm-list").attr("id", "list" + i).text(response.results[i].marketname)
+            $("#div").append(newBtn) 
+            console.log(response.results[i].marketname)
+
+         }
+
         $("#div").attr("style", "display:inline-block")
 
 
