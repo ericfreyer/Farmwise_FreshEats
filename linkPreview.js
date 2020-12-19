@@ -1,22 +1,12 @@
-$(document).ready(function () {  
-    console.log("linked")
-    var previewLink = $("#testID").val();
-    var apiKey = keyValue
-    var queryUrl = "http://api.linkpreview.net/?key=" + apiKey + "&q=" + previewLink
-
-    $("#targetId").click(function(event){
-    event.preventDefault()
-    $.ajax({
-        
-        url: queryUrl,
-        method:"GET",
-        success: function (response) {
-            console.log(response)
-            var imgPrev = $("<img>")
-            $("#mapDiv").append(imgPrev)
-            imgPrev.attr("src", response.image)
-            imgPrev.attr("id", "myMap")
-        }
-    });
-    })
-})
+    var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
