@@ -22,15 +22,18 @@ $(document).ready(function () {
         console.log(response)
         var div = $("<div>").attr("id", "div")
         $("#farmersList").append(div)
-        div.attr("style", "display:inline-block")
+        
+
+console.log(response.results.length)
         var newBtn = $("<button>")
         for (let i = 0; i < response.results.length; i++) {
-            
-            (newBtn).attr("class", "farm-list")
-            $(".farm-list").text(response.results[i])
+            (newBtn).attr("id", "farm-list")
             $("#div").append(newBtn)   
-            
+            $("#farm-list").text(response.results[i].marketname)
         }
+        $("#div").attr("style", "display:inline-block")
+
+
 
 
     id = (response.results[0].id)
