@@ -1,7 +1,8 @@
 $(document).ready(function () {  
     console.log("linked")
     var previewLink = $("#testID").val();
-    var queryUrl = "http://api.linkpreview.net/?key=c63ac61ed8771c3995965c58411aa439&q=" + previewLink
+    var apiKey = keyValue
+    var queryUrl = "http://api.linkpreview.net/?key=" + apiKey + "&q=" + previewLink
 
     $("#targetId").click(function(event){
     event.preventDefault()
