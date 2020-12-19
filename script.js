@@ -30,7 +30,7 @@ $(document).ready(function () {
         for (let i = 0; i < response.results.length; i++) {
            var newBtn = $("<button>").attr("class", "farm-list").attr("id", "list" + i).text(response.results[i].marketname)
             $("#div").append(newBtn) 
-            console.log(response.results[i].marketname)
+
 
          }
 
@@ -38,7 +38,9 @@ $(document).ready(function () {
 
 
 
+         $("#list").on("click", function(){
 
+         
     id = (response.results[0].id)
 
     var queryURL2 = ("http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + id)
@@ -53,3 +55,4 @@ $(document).ready(function () {
 
 }) 
    })
+})
