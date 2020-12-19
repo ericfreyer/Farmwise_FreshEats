@@ -10,3 +10,13 @@ var map = new ol.Map({
       zoom: 10
     })
   });
+
+  var geocoder = new Geocoder('nominatim', {
+    provider: 'osm',
+    lang: 'en-US', 
+    placeholder: 'Search for ...',
+    targetType: 'text-input',
+    limit: 5,
+    keepOpen: true
+  });
+  map.addControl(geocoder);
