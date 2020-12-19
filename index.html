@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+
+=======
     <!--Import Google Icon Font-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -17,11 +19,14 @@
       href="css/materialize.min.css"
       media="screen,projection"
     />
+    <!--Import OpenLayers mapping protocol-->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
     <link rel="stylesheet" href=".styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!--Import JQuery library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="styles.css" />
@@ -63,8 +68,9 @@
         </form>
       </div>
     </div>
+
     <div class="row">
-      <div class="col s7 push-s5"><span class="flow-text"><div id="mapDiv">Map will load here</div></span></div>
+      <div class="col s7 push-s5"><span class="flow-text"><div class="map" id="map">Map will load here</div></span></div>
       <div class="col s5 pull-s7"><span class="flow-text"><div id="farmersList">
       <ul>
         This will hold the list of markets
