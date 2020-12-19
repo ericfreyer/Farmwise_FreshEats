@@ -1,9 +1,10 @@
 $(document).ready(function () {  
 
-    $("#search-this").on("click", function(event){
-    event.preventDefult()
+    // $("#search-this").on("click", function(event){
+    // event.preventDefult()
 
-    var zipcode = $(".search-form").val().trim()
+    // var zipcode = $(".search-form").val().trim()
+    var zipcode = 11385
     var queryURL = ("http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + zipcode)
 
 
@@ -12,6 +13,14 @@ $(document).ready(function () {
         url: queryURL
     }).then(function(response) {
         console.log(response)
+        //create UL
+        for (let i = 0; i < response.results.length; i++) {
+            $("<button>").val(response.results[i]).attr("class", "farm-list")
+            $("#farmerslist").append(".farm-list")
+            
+        }
+
+
 
     id = (response.results[0].id)
 
@@ -26,4 +35,4 @@ $(document).ready(function () {
     })
 
 }) 
-})
+//  })
