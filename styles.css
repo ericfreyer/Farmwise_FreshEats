@@ -1,15 +1,23 @@
-#myMap {
+#mapDiv {
   width: 40%;
   height: 400px;
   opacity: 0.9;
   background-color: #cc533e;
   float: left;
 } 
-
+#moreInfo{
+  background-color: #cc533e;
+  width: 40%;
+  height: 200px;
+  opacity: 0.9;
+  float: left;
+  margin-top: 10px;
+}
+  
  #farmersList{
    opacity: 0.9;
     float: right;
-    width: 30%;
+    width: 40%;
     height: 600px;
     background-color: #cc533e;
 } 
