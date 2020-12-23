@@ -13,10 +13,21 @@ var map = new ol.Map({
 
   var geocoder = new Geocoder('nominatim', {
     provider: 'osm',
-    lang: 'en-US', 
-    placeholder: 'Search for ...',
     targetType: 'text-input',
+    lang: 'en',
+    placeholder: 'Search for ...',
     limit: 5,
-    keepOpen: true
+    keepOpen: false,
   });
+  // var popup = new ol.Overlay.Popup();
+
   map.addControl(geocoder);
+  // map.addOverlay(popup);
+
+  geocoder.on('addresschosen', (evt) => {
+    var feature = evt.feature,
+      coord = evt.coordinate,
+      address = evt.address;
+  geocoder.getSource().clear();
+  geocoder.getSource().addFeature(feature);
+  });
