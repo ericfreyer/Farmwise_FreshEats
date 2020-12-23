@@ -19,15 +19,13 @@ var map = new ol.Map({
     limit: 5,
     keepOpen: false,
   });
-  // var popup = new ol.Overlay.Popup();
-
   map.addControl(geocoder);
-  // map.addOverlay(popup);
-
-  geocoder.on('addresschosen', (evt) => {
-    var feature = evt.feature,
-      coord = evt.coordinate,
-      address = evt.address;
+  
+  geocoder.on('addresschosen', function(response) {
+    console.log(response)
+    var feature = response.feature,
+      coord = response.coordinate,
+      address = response.address;
   geocoder.getSource().clear();
   geocoder.getSource().addFeature(feature);
   });
