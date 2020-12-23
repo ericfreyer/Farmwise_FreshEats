@@ -1,13 +1,5 @@
 $(document).ready(function () {  
 
-  
-// $("<button>").attr("id", "button").text("YPPPPPPP")
-// $(".container").append("#button")
-
-
-
-
-
     $("#search-this").on("click", function(){
     // event.preventDefult()
 
@@ -28,28 +20,51 @@ $(document).ready(function () {
         
 
         for (let i = 0; i < response.results.length; i++) {
-           var newBtn = $("<button>").attr("class", "farm-list").attr("id", "list" + i).text(response.results[i].marketname)
+           var newBtn = $("<button>").attr("class", "farm-list").attr("id", i).text(response.results[i].marketname)
             $("#div").append(newBtn) 
-            console.log(response.results[i].marketname)
+        }
 
-         }
-
+    
         $("#div").attr("style", "display:inline-block")
+    
 
+         $(".farm-list").on("click", function(){   
+            
+            id = (response.results[0].id)
+            
+            var queryURL2 = ("http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + id)
 
+            $.ajax({
+                type: "GET",
+                url: queryURL2
+            }).then(function(data) {
+                console.log(data)
+            
+            $("#list").on("click", function(){
+            })
+            console.log(data.marketdetails.Address)
+            //address
 
+            $("#address").text(data.marketdetails.Address)
+            //google map link
+            var googleLink = data.marketdetails.GoogleLink
+            $('<a>',{
+                text: 'Map Link',
+                title: 'Google Map',
+                href: googleLink,
+                click: function(){ BlahFunc( options.rowId );return false;}
+            }).appendTo('#address');
+            //products
 
-    id = (response.results[0].id)
-
-    var queryURL2 = ("http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + id)
-
-    $.ajax({
-        type: "GET",
-        url: queryURL2
-    }).then(function(data) {
-        console.log(data)
-    })
-    })
-
+            $("#products").text("What is available at this market: " + data.marketdetails.Products)
+            //Schedule
+            var Schedule = data.marketdetails.Schedule
+            var string = Schedule.split(';')[0];
+            $("#schedule").text("Hours of Operation: " + string)
+        
+        
+})
+})
 }) 
-   })
+})
+})
