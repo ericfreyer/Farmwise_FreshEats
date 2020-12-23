@@ -20,19 +20,25 @@ $(document).ready(function () {
         
 
         for (let i = 0; i < response.results.length; i++) {
-           var newBtn = $("<button>").attr("class", "farm-list").attr("id", i).text(response.results[i].marketname)
+           var newBtn = $("<button>").attr("class", "farm-list").attr("id", i).text(response.results[i].marketname).attr("value", i)
             $("#div").append(newBtn) 
         }
 
     
-        $("#div").attr("style", "display:inline-block")
-    
 
          $(".farm-list").on("click", function(){   
-            
-            id = (response.results[0].id)
-            
+
+
+
+
+            var i = $(this).attr("value")
+            var id = (response.results[i].id)
             var queryURL2 = ("http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + id)
+
+
+
+
+
 
             $.ajax({
                 type: "GET",
