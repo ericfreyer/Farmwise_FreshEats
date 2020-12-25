@@ -17,6 +17,10 @@
       href="css/materialize.min.css"
       media="screen,projection"
     />
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
     <!--Import OpenLayers mapping protocol-->
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
     <link rel="stylesheet" href=".styles.css" />
@@ -38,11 +42,28 @@
     />
   </head>
   <body>
+    <nav>
+        <div class="nav-wrapper">
+          <h1 class="brand-logo center">Welcome To....</h1>
+          <!--<form>
+            <div class="input-field">
+              <input id="search" type="search" required placeholder="Enter Zip Code">
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>-->
+
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">About US</a></li>
+          </ul> 
+        </div>
+      </nav>
     <div class="header">
       <h1>Farmwise</h1>
       <h2>Fresh Eats</h2>
       <p>It's always better local!</p>
     </div>
+
     <div class="container">
       <div id="content">
         <form class="form-inline">
@@ -65,18 +86,17 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> 
 
     <div class="row">
-      <div class="col s7 push-s5"><span class="flow-text"><div class="map" id="map">Map will load here</div></span></div>
-      <div class="col s5 pull-s7"><span class="flow-text"><a class="waves-effect waves-light btn"></a>
-        <div id="farmersList">  
+      <div class="col s7"><span class="flow-text"><div class="map" id="map"></div></span></div>
+      <div class="col s5"><span class="flow-text hide"><div id="farmersList">Farmers List
     </div>
     </span>
   </div>
   </div>
   <div class="row">
-    <div class="col s7 push-s5"><span class="flow-text"><div id="moreInfo">
+    <div class="col s7"><span class="flow-text hide"><div id="moreInfo"><h3>more info</h3>
     <div id="address">
     </div>
     <br>
@@ -89,7 +109,7 @@
   </div></div>
 
 
-    <div id="farmersList">
+    <div id="farmersList" class="hide"><h3>Farmers List</h3>
     <ul>
     </ul>
     </div>
