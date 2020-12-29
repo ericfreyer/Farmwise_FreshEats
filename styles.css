@@ -7,21 +7,21 @@
   height: 400px;
   background-color: #cc533e;
   float: left;
-} 
-#moreInfo{
+}
+#moreInfo {
   background-color: #cc533e;
   width: 40%;
   height: 200px;
   float: left;
   margin-top: 50px;
 }
-  
- #farmersList{
-    float: right;
-    width: 40%;
-    height: 400px;
-    background-color: #cc533e;
-} 
+
+#farmersList {
+  float: right;
+  width: 40%;
+  height: 400px;
+  background-color: #cc533e;
+}
 
 #aboutUs {
   opacity: 0.9;
@@ -32,19 +32,20 @@
   background-color: #cc533e;
 }
 
-html, body {
-  height:100%;
+html,
+body {
+  height: 100%;
   background-image: url("images/sunset.jpg");
   font-family: Montserrat, sans-serif;
 }
 
 .well {
-  background-color: #ffffee
+  background-color: #ffffee;
 }
 
 #content {
-  padding: 25% 25% 5%; 
-  position: relative; 
+  padding: 25% 25% 5%;
+  position: relative;
 }
 
 .search-form {
@@ -52,11 +53,11 @@ html, body {
 }
 
 .input-group {
-  width:100%;
+  width: 100%;
 }
 
 .input-group-btn {
-  max-width:38px;
+  max-width: 38px;
 }
 
 #search {
@@ -65,11 +66,10 @@ html, body {
 }
 
 .search-btn {
-  cursor:pointer;
-  border-radius: 0 30px 30px 0; 
-  background-color:#fff;
-  color:#669;
-  
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+  background-color: #fff;
+  color: #669;
 }
 
 .text-center {
@@ -81,11 +81,10 @@ html, body {
   color: white;
   font-size: 25px;
 }
-#list{
-  display:inline-block;
+#list {
+  display: inline-block;
 }
-.farm-list{
+.farm-list {
   margin-bottom: 10px;
   display: inline-block;
-  
 }
