@@ -9,7 +9,7 @@ $(document).ready(function () {
     var zipcode = $(".search-form").val().trim();
     // var zipcode = 11385
     var queryURL =
-      "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" +
+      "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" +
       zipcode;
 
     $.ajax({
