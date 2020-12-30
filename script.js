@@ -48,7 +48,7 @@ $(document).ready(function () {
         }).then(function (data) {
             $("#moreInfo").show();
           console.log(data);
-
+          
           $("#list").on("click", function () {});
           console.log(data.marketdetails.Address);
           //address
@@ -74,6 +74,20 @@ $(document).ready(function () {
           var Schedule = data.marketdetails.Schedule;
           var string = Schedule.split(";")[0];
           $("#schedule").text("Hours of Operation: " + string);
+          var geoReg = /[-]?[\d]+[.][\d]*/g;
+          var coordArray = googleLink;
+          var latLong = coordArray.match(geoReg);
+          console.log(latLong);
+          // var layer = new ol.layer.Vector({
+          //   source: new ol.source.Vector({
+          //     features: [
+          //       new ol.Feature({
+          //         geometry: new ol.geom.Point(ol.proj.fromLonLat(latLong[1],latLong[0]))
+          //       })
+          //     ]
+          //   })
+          // })
+          // map.addLayer(layer);
         });
       });
     });
