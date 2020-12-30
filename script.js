@@ -78,16 +78,6 @@ $(document).ready(function () {
           var coordArray = googleLink;
           var latLong = coordArray.match(geoReg);
           console.log(latLong);
-          // var layer = new ol.layer.Vector({
-          //   source: new ol.source.Vector({
-          //     features: [
-          //       new ol.Feature({
-          //         geometry: new ol.geom.Point(ol.proj.fromLonLat(latLong[1],latLong[0]))
-          //       })
-          //     ]
-          //   })
-          // })
-          // map.addLayer(layer);
         });
       });
     });

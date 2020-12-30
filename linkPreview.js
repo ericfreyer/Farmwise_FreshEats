@@ -1,4 +1,9 @@
+var attribution = new ol.control.Attribution({
+  collapsible: true
+});
+
 var map = new ol.Map({
+    controls: ol.control.defaults({attribution: false}).extend([attribution]),
     target: 'map',
     layers: [
       new ol.layer.Tile({
