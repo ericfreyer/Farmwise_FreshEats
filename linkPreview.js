@@ -13,10 +13,19 @@ var map = new ol.Map({
 
   var geocoder = new Geocoder('nominatim', {
     provider: 'osm',
-    lang: 'en-US', 
-    placeholder: 'Search for ...',
     targetType: 'text-input',
+    lang: 'en',
+    placeholder: 'Search for ...',
     limit: 5,
-    keepOpen: true
+    keepOpen: false,
   });
   map.addControl(geocoder);
+  
+  geocoder.on('addresschosen', function(response) {
+    console.log(response)
+    var feature = response.feature,
+      coord = response.coordinate,
+      address = response.address;
+  geocoder.getSource().clear();
+  geocoder.getSource().addFeature(feature);
+  });
