@@ -9,7 +9,7 @@ $(document).ready(function () {
     var zipcode = $(".search-form").val().trim();
     // var zipcode = 11385
     var queryURL =
-      "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" +
+      "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" +
       zipcode;
 
     $.ajax({
@@ -39,7 +39,7 @@ $(document).ready(function () {
         var i = $(this).attr("value");
         var id = response.results[i].id;
         var queryURL2 =
-          "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" +
+          "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" +
           id;
 
         $.ajax({
@@ -48,7 +48,7 @@ $(document).ready(function () {
         }).then(function (data) {
             $("#moreInfo").show();
           console.log(data);
-
+          
           $("#list").on("click", function () {});
           console.log(data.marketdetails.Address);
           //address
@@ -74,6 +74,20 @@ $(document).ready(function () {
           var Schedule = data.marketdetails.Schedule;
           var string = Schedule.split(";")[0];
           $("#schedule").text("Hours of Operation: " + string);
+          var geoReg = /[-]?[\d]+[.][\d]*/g;
+          var coordArray = googleLink;
+          var latLong = coordArray.match(geoReg);
+          console.log(latLong);
+          // var layer = new ol.layer.Vector({
+          //   source: new ol.source.Vector({
+          //     features: [
+          //       new ol.Feature({
+          //         geometry: new ol.geom.Point(ol.proj.fromLonLat(latLong[1],latLong[0]))
+          //       })
+          //     ]
+          //   })
+          // })
+          // map.addLayer(layer);
         });
       });
     });
