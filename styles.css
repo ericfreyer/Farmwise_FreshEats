@@ -19,12 +19,12 @@ body {
   /* width: 40%;
   height: 200px; */
   float: left;
-  /* margin-top: 50px; */
 }
 
 #farmersList {
   float: right;
   background-color: #cc533e;
+  display: flex;
 }
 
 #aboutUs {
@@ -82,7 +82,8 @@ body {
 }
 .farm-list {
   margin-bottom: 10px;
-  display: inline-block;
+  display: block;
+  font-size: 16px;  
 }
 
 .waves-effect.waves-brown .waves-ripple {
