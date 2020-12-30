@@ -23,12 +23,15 @@ $(document).ready(function () {
       
       $("#farmersList").append(div);
 
+        
       for (let i = 0; i < response.results.length; i++) {
+        var marketName = (response.results[i].marketname).replace(/\d/g,'').replace(/\./g, "")
         var newBtn = $("<button>")
           .attr("class", "farm-list")
           .attr("id", i)
-          .text(response.results[i].marketname)
-          .attr("value", i);
+          .text(marketName)
+          .attr("value", i)
+          
         $("#div").append(newBtn);
       }
 
