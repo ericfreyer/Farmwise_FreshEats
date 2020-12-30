@@ -28,13 +28,18 @@ body {
   background-color: #cc533e;
 }
 
-#aboutUs {
-  opacity: 0.9;
+.card {
+  /*opacity: 0.9;
   margin-top: 5px;
-  text-align: center;
-  width: 100%;
+  align: center;
+  width: 100%; */
+  color: white;
   height: 300px;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: #cc533e;
+  
 }
 
 #content {

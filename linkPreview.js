@@ -7,25 +7,7 @@ var map = new ol.Map({
     ],
     view: new ol.View({
       center: ol.proj.fromLonLat([-73.935242, 40.730610]),
+      maxZoom: 20,
       zoom: 10
     })
-  });
-
-  var geocoder = new Geocoder('nominatim', {
-    provider: 'osm',
-    targetType: 'text-input',
-    lang: 'en',
-    placeholder: 'Search for ...',
-    limit: 5,
-    keepOpen: false,
-  });
-  map.addControl(geocoder);
-  
-  geocoder.on('addresschosen', function(response) {
-    console.log(response)
-    var feature = response.feature,
-      coord = response.coordinate,
-      address = response.address;
-  geocoder.getSource().clear();
-  geocoder.getSource().addFeature(feature);
   });
