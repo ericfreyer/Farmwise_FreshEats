@@ -3,7 +3,7 @@ $(document).ready(function () {
   $("#moreInfo").hide();
   $("#map").hide();
 
-  $("#search-this").on("click", function () {
+  $(".waves-teal").on("click", function () {
     // event.preventDefult()
 
     var zipcode = $(".search-form").val().trim();
