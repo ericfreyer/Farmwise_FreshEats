@@ -39,7 +39,7 @@ $(document).ready(function () {
         var i = $(this).attr("value");
         var id = response.results[i].id;
         var queryURL2 =
-          "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" +
+          "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" +
           id;
 
         $.ajax({
