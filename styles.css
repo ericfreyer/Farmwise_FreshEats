@@ -55,6 +55,7 @@ body {
 
 .input-group {
   width: 100%;
+  text-align: center;
 }
 
 /* .input-group-btn {
@@ -105,4 +106,5 @@ body {
 
 #storedZips{
   text-align: center;
+
 }

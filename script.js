@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   getItem()
   $("#farmersList").hide();
@@ -6,9 +7,11 @@ $(document).ready(function () {
 // getItem()
   var zipsArry = []
 
-  $(".waves-teal").on("click", function () {
   
-    //set local storage
+
+  $(".waves-teal").on("click", function render() {
+  
+    $("#storedZips").attr("style", "display:block");
     
     var searchZips = $(".search-form").val().trim()
     zipsArry.push(searchZips)
@@ -24,7 +27,7 @@ $(document).ready(function () {
 
     }
 
-console.log(zipsArry)
+
     var zipcode = $(".search-form").val().trim();
     // var zipcode = 11385
     var queryURL =
@@ -99,7 +102,7 @@ console.log(zipsArry)
           console.log(latLong);
         });
       });
-    });storeItem()
+    });storeItem() 
   });
   
   
