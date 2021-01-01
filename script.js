@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  getItem()
   $("#farmersList").hide();
   $("#moreInfo").hide();
   $("#map").hide();
@@ -11,10 +12,10 @@ $(document).ready(function () {
     
     var searchZips = $(".search-form").val().trim()
     zipsArry.push(searchZips)
-    $("#storedZips").append($("<button>").text(searchZips))
+    $("#storedZips").append($("<button>").attr("class", "re-zip").text(searchZips))
     
     function storeItem(){
-    localStorage.setItem("zips", JSON.stringify(searchZips))
+    localStorage.setItem("zips", JSON.stringify(zipsArry))
     var savedZips = JSON.parse(localStorage.getItem("zips"))
     if (searchZips !== null){
       searchZips = savedZips
@@ -23,7 +24,7 @@ $(document).ready(function () {
 
     }
 
-
+console.log(zipsArry)
     var zipcode = $(".search-form").val().trim();
     // var zipcode = 11385
     var queryURL =
@@ -103,31 +104,31 @@ $(document).ready(function () {
   
   
 
-// function getItem(){
-//   var getItem = JSON.parse(localStorage.getItem("zips"))
-//    var arrayOfValues = [];
+function getItem(){
+  var getItem = JSON.parse(localStorage.getItem("zips"))
+   var arrayOfValues = [];
 
 
     
-//    function newButton(){
+   function newButton(){
 
 
-//        for(var i in getItem){
+       for(var i in getItem){
       
-//        if(getItem.hasOwnProperty(i)){
-//            arrayOfValues.push(getItem[i]);
-//        }}
+       if(getItem.hasOwnProperty(i)){
+           arrayOfValues.push(getItem[i]);
+       }}
 
-//        for (let i = 0; i < arrayOfValues.length; i++) {
+       for (let i = 0; i < arrayOfValues.length; i++) {
 
 
-//            var button = $("<button>").attr("class", "re-search").text(arrayOfValues[i])
-//        $("#schedule").append(button)
-//        };
+           var button = $("<button>").attr("class", "re-zip").text(arrayOfValues[i])
+       $("#storedZips").append(button)
+       };
             
-//       console.log(arrayOfValues)
-//    } 
-//    newButton()
 
-// } 
+   } 
+   newButton()
+
+} 
 })
