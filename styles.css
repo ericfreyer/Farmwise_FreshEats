@@ -46,6 +46,7 @@ body {
 #content {
   padding: 25% 25% 5%;
   position: relative;
+  padding-top: 2px;
 }
 
 .search-form {
@@ -54,6 +55,7 @@ body {
 
 .input-group {
   width: 100%;
+  text-align: center;
 }
 
 /* .input-group-btn {
@@ -99,4 +101,10 @@ body {
  }
 .container{
   display: inline;
+}
+
+
+#storedZips{
+  text-align: center;
+
 }
