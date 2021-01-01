@@ -2,9 +2,27 @@ $(document).ready(function () {
   $("#farmersList").hide();
   $("#moreInfo").hide();
   $("#map").hide();
+// getItem()
+  var zipsArry = []
 
   $(".waves-teal").on("click", function () {
-    // event.preventDefult()
+  
+    //set local storage
+    
+    var searchZips = $(".search-form").val().trim()
+    zipsArry.push(searchZips)
+    $("#storedZips").append($("<button>").text(searchZips))
+    
+    function storeItem(){
+    localStorage.setItem("zips", JSON.stringify(searchZips))
+    var savedZips = JSON.parse(localStorage.getItem("zips"))
+    if (searchZips !== null){
+      searchZips = savedZips
+    
+  } 
+
+    }
+
 
     var zipcode = $(".search-form").val().trim();
     // var zipcode = 11385
@@ -80,6 +98,36 @@ $(document).ready(function () {
           console.log(latLong);
         });
       });
-    });
+    });storeItem()
   });
-});
+  
+  
+
+// function getItem(){
+//   var getItem = JSON.parse(localStorage.getItem("zips"))
+//    var arrayOfValues = [];
+
+
+    
+//    function newButton(){
+
+
+//        for(var i in getItem){
+      
+//        if(getItem.hasOwnProperty(i)){
+//            arrayOfValues.push(getItem[i]);
+//        }}
+
+//        for (let i = 0; i < arrayOfValues.length; i++) {
+
+
+//            var button = $("<button>").attr("class", "re-search").text(arrayOfValues[i])
+//        $("#schedule").append(button)
+//        };
+            
+//       console.log(arrayOfValues)
+//    } 
+//    newButton()
+
+// } 
+})

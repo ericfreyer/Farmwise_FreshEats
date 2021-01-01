@@ -46,6 +46,7 @@ body {
 #content {
   padding: 25% 25% 5%;
   position: relative;
+  padding-top: 2px;
 }
 
 .search-form {
@@ -99,4 +100,9 @@ body {
  }
 .container{
   display: inline;
+}
+
+
+#storedZips{
+  text-align: center;
 }
