@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
   getItem()
@@ -11,7 +10,7 @@ $(document).ready(function () {
   
 
   $(".waves-teal").on("click", function () {
-  
+  $("#div").empty()
     $("#storedZips").attr("style", "display:block");
     
     var searchZips = $(".search-form").val().trim()
@@ -41,7 +40,7 @@ $(document).ready(function () {
     }).then(function (response) {
       console.log(response);
       $("#farmersList").show();
-  $("#map").show();
+      $("#map").show();
       var div = $("<div>").attr("id", "div");
       
       $("#farmersList").append(div);
