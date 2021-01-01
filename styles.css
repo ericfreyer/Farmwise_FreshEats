@@ -1,7 +1,9 @@
 body {
   height: 100%;
-  background-image: url("images/sunset.jpg");
+  background-image: url("https://www.75centralphotography.com/wp-content/uploads/2019/01/farm-sunset-west-texas-landscape.jpg");
   font-family: Montserrat, sans-serif;
+  background-size: cover;
+ background-repeat: no-repeat;
 }
 
 .nav-wrapper {
