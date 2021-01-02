@@ -137,8 +137,27 @@ body {
   color: white;
   margin: auto;
   vertical-align: middle;
+  text-align: center;
 }
  #address, #products, #schedule {
    color: white;
  }
 
+
+.images-arrow {
+  content:url(./Images/Untitled.png);
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
