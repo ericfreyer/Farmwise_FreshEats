@@ -1,7 +1,9 @@
 $(document).ready(function () {
   var attribution = new ol.control.Attribution({
-    collapsible: true
+    collapsible: true,
   });
+  var zoomSlider = new ol.control.ZoomSlider();
+  
   
   var map = new ol.Map({
       controls: ol.control.defaults({attribution: false}).extend([attribution]),
@@ -17,7 +19,7 @@ $(document).ready(function () {
         zoom: 10
       })
     });
-  
+    map.addControl(zoomSlider);
 
   getItem()
   $("#farmersList").hide();
@@ -129,42 +131,8 @@ $(document).ready(function () {
                 ]
             })
         });
+        pinDrop.setStyle(iconStyle)
         map.addLayer(pinDrop);
-        // var tileLayer = new TileLayer({
-        //   source: new OSM({
-        //     wrapX: false,
-        //   }),
-        // });
-        // function ping (pinDrop) {
-        //   var execute = new Date().getTime();
-        //   var listen = tileLayer.on("postrender", firePing);
-        //   function firePing(event) {
-        //     var vectorContext = getVectorContext(event);
-        //     var frameState = event.frameState; 
-        //     var flashGeom = feature.getGeometry().clone();
-        //     var elapsed = frameState.time - execute;
-        //     var elapsedRatio = elapsed / duration;
-        //     var radius = easeOut(elapsedRatio) * 15 + 5;
-        //     var opacity = easeOut(1 - elapsedRatio);
-        //     var style = new Style({
-        //       image: new CircleStyle({
-        //         radius: radius,
-        //         stroke: new Stroke({
-        //           color: 'rgba(255, 0, 0, ' + opacity + ')',
-        //           width: 0.25 + opacity,
-        //         }),
-        //       }),
-        //     });
-        //     vectorContext.setStyle(style);
-        //     vectorContext.drawGeometry(flashGeom);
-        //     if (elapsed > duration) {
-        //       unByKey(listen);
-        //       return;
-        //     }
-        //     map.render()
-        //   }
-        // }
-        // pinDrop.on('addLayer', ping())
         });
       });
     });storeItem() 
