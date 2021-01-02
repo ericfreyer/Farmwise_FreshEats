@@ -8,7 +8,6 @@ $(document).ready(function () {
   var zipsArry = []
 
   
-
   $(".waves-teal").on("click", function () {
   $("#div").empty()
   var searchZips = $(".search-form").val().trim()
