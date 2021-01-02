@@ -33,6 +33,8 @@ $(document).ready(function () {
   
   $(".header").attr("style", "display: none;")
   $("#newTitle").show();
+  $(".brand-logo").append("<p>").attr("id", "betterFresh");
+  $("#betterFresh").text("It's always better local!")
 
   var searchZips = $(".search-form").val().trim()
   zipsArry.push(searchZips)
