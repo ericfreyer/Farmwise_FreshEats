@@ -11,6 +11,7 @@ $(document).ready(function () {
 
   $(".waves-teal").on("click", function () {
   $("#div").empty()
+  // $(".header").attr("style", "display: None")
   var searchZips = $(".search-form").val().trim()
   zipsArry.push(searchZips)
   $("#storedZips").append($("<button>").attr("class", "re-zip").text(searchZips))
