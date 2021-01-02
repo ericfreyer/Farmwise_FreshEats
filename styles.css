@@ -1,7 +1,7 @@
 body {
   height: 100%;
   background-image: url(./Images/farm-sunset-west-texas-landscape.JPG);
-  font-family: Montserrat, sans-serif;
+  font-family: lato, sans-serif;
   background-size: cover;
  background-repeat: no-repeat;
 }
@@ -10,6 +10,7 @@ body {
   color: white;
   background-color: #cc533e;
 }
+
 .map {
   width: 100%;
   height: 400px;
@@ -105,7 +106,7 @@ body {
   font-family: indie flower;
 }
 
-.nav-wrapper{
+.nav-wrapper, nav, h4, h5{
   font-family: indie flower;
 }
 
@@ -138,6 +139,7 @@ body {
   margin: auto;
   vertical-align: middle;
   text-align: center;
+  font-family: indie flower;
 }
  #address, #products, #schedule {
    color: white;
@@ -145,19 +147,19 @@ body {
 
 
 .images-arrow {
-  content:url(./Images/Untitled.png);
-  animation-duration: 3s;
-  animation-name: slidein;
+  content:url(./Images/capture.png);
+  width: 25%;
+  height: 25%;
+  float: right;
+  position: relative;
+  animation-name: mymove;
+  animation: mymove 2s;
+  animation-timing-function: linear;
+  
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+@keyframes mymove {
+  from {left: -700px;}
+  to {left: 50px;}
 }
+
