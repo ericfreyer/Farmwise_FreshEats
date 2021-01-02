@@ -122,6 +122,14 @@ $(document).ready(function () {
           var coordArray = googleLink;
           var latLong = coordArray.match(geoReg);
           console.log(latLong);
+          var iconStyle = new ol.style.Style({
+            image: new ol.style.Icon({
+              anchor: [0.5, 46],
+              anchorXUnits: "fraction",
+              anchorYUnits: "pixels",
+              src: "Images/icon.png"
+            })
+          })
           var pinDrop = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
