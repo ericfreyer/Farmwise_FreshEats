@@ -23,14 +23,16 @@ $(document).ready(function () {
   $("#farmersList").hide();
   $("#moreInfo").hide();
   $("#map").hide();
+  $("#newTitle").hide();
 
   var zipsArry = []
 
   
   $(".waves-teal").on("click", function () {
   $("#div").empty()
+  
   $(".header").attr("style", "display: none;")
-  $("#newTitle").text("Farmwise Fresh Eats.")
+  $("#newTitle").show();
 
   var searchZips = $(".search-form").val().trim()
   zipsArry.push(searchZips)
@@ -172,8 +174,9 @@ $(document).ready(function () {
 //click stored zip buttons
 $(".re-zip").on("click", function () {
   $("#div").empty()
+  $("#newTitle").show();
   $(".header").attr("style", "display: none;")
-  $("#newTitle").text("Farmwise Fresh Eats.")
+
   var zipcode = $(".re-zip").text().trim();
 
   var queryURL =
