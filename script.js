@@ -45,6 +45,7 @@ $(document).ready(function () {
 
         
       for (let i = 0; i < response.results.length; i++) {
+        if(i==10) break;
         var marketName = (response.results[i].marketname).replace(/\d/g,'').replace(/\./g, "")
         var newBtn = $("<button>")
           .attr("class", "farm-list")
