@@ -35,6 +35,7 @@ body {
   
 }
 
+
 .card {
   /*opacity: 0.9;
   margin-top: 5px;
@@ -91,7 +92,13 @@ body {
   text-align: center;
   color: white;
   font-size: 25px;
+  font-family: indie flower;
 }
+
+.nav-wrapper{
+  font-family: indie flower;
+}
+
 #list {
   display: inline-block;
 }
@@ -114,5 +121,7 @@ body {
   text-align: center;
 
 }
-
+ #address, #products, #schedule {
+   color: white;
+ }
 

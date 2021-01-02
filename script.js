@@ -8,8 +8,7 @@ $(document).ready(function () {
   var zipsArry = []
 
   
-
-  $(".waves-teal").on("click", function render() {
+  $(".waves-teal").on("click", function () {
   $("#div").empty()
   $(".header").attr("style", "display: none;")
   $("#newTitle").text("Farmwise Fresh Eats.")
