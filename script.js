@@ -172,6 +172,8 @@ $(document).ready(function () {
 //click stored zip buttons
 $(".re-zip").on("click", function () {
   $("#div").empty()
+  $(".header").attr("style", "display: none;")
+  $("#newTitle").text("Farmwise Fresh Eats.")
   var zipcode = $(".re-zip").text().trim();
 
   var queryURL =
