@@ -1,4 +1,23 @@
 $(document).ready(function () {
+  var attribution = new ol.control.Attribution({
+    collapsible: true
+  });
+  
+  var map = new ol.Map({
+      controls: ol.control.defaults({attribution: false}).extend([attribution]),
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([-73.935242, 40.730610]),
+        maxZoom: 20,
+        zoom: 10
+      })
+    });
+  
 
   getItem()
   $("#farmersList").hide();
@@ -8,8 +27,7 @@ $(document).ready(function () {
   var zipsArry = []
 
   
-
-  $(".waves-teal").on("click", function render() {
+  $(".waves-teal").on("click", function () {
   $("#div").empty()
   $(".header").attr("style", "display: none;")
   $("#newTitle").text("Farmwise Fresh Eats.")
@@ -100,7 +118,7 @@ $(document).ready(function () {
           var coordArray = googleLink;
           var latLong = coordArray.match(geoReg);
           console.log(latLong);
-          var layer = new ol.layer.Vector({
+          var pinDrop = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
                     new ol.Feature({
@@ -109,7 +127,42 @@ $(document).ready(function () {
                 ]
             })
         });
-        map.addLayer(layer);
+        map.addLayer(pinDrop);
+        // var tileLayer = new TileLayer({
+        //   source: new OSM({
+        //     wrapX: false,
+        //   }),
+        // });
+        // function ping (pinDrop) {
+        //   var execute = new Date().getTime();
+        //   var listen = tileLayer.on("postrender", firePing);
+        //   function firePing(event) {
+        //     var vectorContext = getVectorContext(event);
+        //     var frameState = event.frameState; 
+        //     var flashGeom = feature.getGeometry().clone();
+        //     var elapsed = frameState.time - execute;
+        //     var elapsedRatio = elapsed / duration;
+        //     var radius = easeOut(elapsedRatio) * 15 + 5;
+        //     var opacity = easeOut(1 - elapsedRatio);
+        //     var style = new Style({
+        //       image: new CircleStyle({
+        //         radius: radius,
+        //         stroke: new Stroke({
+        //           color: 'rgba(255, 0, 0, ' + opacity + ')',
+        //           width: 0.25 + opacity,
+        //         }),
+        //       }),
+        //     });
+        //     vectorContext.setStyle(style);
+        //     vectorContext.drawGeometry(flashGeom);
+        //     if (elapsed > duration) {
+        //       unByKey(listen);
+        //       return;
+        //     }
+        //     map.render()
+        //   }
+        // }
+        // pinDrop.on('addLayer', ping())
         });
       });
     });storeItem() 

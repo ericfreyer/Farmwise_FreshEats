@@ -40,13 +40,14 @@ body {
   
 }
 
+
 .card {
   /*opacity: 0.9;
   margin-top: 5px;
   align: center;
   width: 100%; */
   color: white;
-  height: 300px;
+  height: 100%;
   margin-top: 10%;
   margin-left: 10%;
   margin-right: 10%;
@@ -96,7 +97,13 @@ body {
   text-align: center;
   color: white;
   font-size: 25px;
+  font-family: indie flower;
 }
+
+.nav-wrapper{
+  font-family: indie flower;
+}
+
 #list {
   display: inline-block;
 }
@@ -126,5 +133,7 @@ body {
   margin: auto;
   vertical-align: middle;
 }
-
+ #address, #products, #schedule {
+   color: white;
+ }
 
