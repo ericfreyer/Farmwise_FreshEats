@@ -31,8 +31,7 @@ $(document).ready(function () {
   $("#div").empty()
   $(".header").attr("style", "display: none;")
   $("#newTitle").text("Farmwise Fresh Eats.")
-    // <h2>Fresh Eats</h2>
-    // <p>It's always better local!</p>)
+
   var searchZips = $(".search-form").val().trim()
   zipsArry.push(searchZips)
   $("#storedZips").append($("<button>").attr("class", "re-zip").text(searchZips))
