@@ -112,9 +112,10 @@ $(document).ready(function () {
     });storeItem() 
   });
 
-//click stored zips
-$(".re-zip").on("click", function () {
 
+//click stored zip buttons
+$(".re-zip").on("click", function () {
+  $("#div").empty()
   var zipcode = $(".re-zip").text().trim();
 
   var queryURL =
@@ -132,7 +133,6 @@ $(".re-zip").on("click", function () {
     
     $("#farmersList").append(div);
 
-      
     for (let i = 0; i < response.results.length; i++) {
       if(i==10) break;
       var marketName = (response.results[i].marketname).replace(/\d/g,'').replace(/\./g, "")
@@ -145,9 +145,9 @@ $(".re-zip").on("click", function () {
       $("#div").append(newBtn);
     }
 
-})
-
 $(".farm-list").on("click", function () {
+  console.log("working!")
+
   var i = $(this).attr("value");
   var id = response.results[i].id;
   var queryURL2 =
@@ -161,7 +161,7 @@ $(".farm-list").on("click", function () {
       $("#moreInfo").show();
     console.log(data);
     
-    $("#list").on("click", function () {;
+    $("#list").on("click", function (){});
     console.log(data.marketdetails.Address);
     //address
 
@@ -205,38 +205,23 @@ $(".farm-list").on("click", function () {
 });
 })
 
-
-
-
-
-
-
-
+//get stored item
   function getItem(){
     var getItem = JSON.parse(localStorage.getItem("zips"))
      var arrayOfValues = [];
-  
-  
-      
      function newButton(){
-  
-  
          for(var i in getItem){
-        
          if(getItem.hasOwnProperty(i)){
              arrayOfValues.push(getItem[i]);
          }}
-  
          for (let i = 0; i < arrayOfValues.length; i++) {
-  
-  
              var button = $("<button>").attr("class", "re-zip").text(arrayOfValues[i])
          $("#storedZips").append(button)
-         };
-              
-  
+         };     
      } 
      newButton()
-  
-  } 
-  })
+  }
+
+
+
+})
