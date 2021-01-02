@@ -17,10 +17,15 @@ body {
   float: left;
 }
 #moreInfo {
-  background-color: rgb(204, 83, 62, .65);
+  background-color: rgb(204, 83, 62, .8);
   float: left;
   border-radius: 10px;
   font-size: 20px;
+  margin: 0 auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #farmersList {
@@ -112,7 +117,14 @@ body {
 
 #storedZips{
   text-align: center;
+  padding-top: 2%;
+}
 
+#newTitle{
+  font-size: 35px;
+  color: white;
+  margin: auto;
+  vertical-align: middle;
 }
 
 
