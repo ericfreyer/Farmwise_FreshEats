@@ -152,7 +152,7 @@ body {
   height: 25%;
   float: right;
   position: relative;
-  animation-name: mymove;
+  /* animation-name: mymove;
   animation: mymove 2s;
   animation-timing-function: linear;
   
@@ -161,5 +161,5 @@ body {
 @keyframes mymove {
   from {left: -700px;}
   to {left: 50px;}
-}
+} */
 
