@@ -145,3 +145,21 @@ body {
    color: white;
  }
 
+
+.images-arrow {
+  content:url(./Images/capture.png);
+  width: 25%;
+  height: 25%;
+  float: right;
+  position: relative;
+  /* animation-name: mymove;
+  animation: mymove 2s;
+  animation-timing-function: linear;
+  
+}
+
+@keyframes mymove {
+  from {left: -700px;}
+  to {left: 50px;}
+} */
+

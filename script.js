@@ -26,13 +26,14 @@ $(document).ready(function () {
   $("#moreInfo").hide();
   $("#map").hide();
   $("#newTitle").hide();
+  $(".images-arrow").hide();
 
   var zipsArry = []
 
   
   $(".waves-teal").on("click", function () {
   $("#div").empty()
-  
+  $(".images-arrow").show()
   $(".header").attr("style", "display: none;")
   $("#newTitle").show();
   $(".brand-logo").append("<p>").attr("id", "betterFresh");
@@ -153,6 +154,7 @@ $(document).ready(function () {
 $(".re-zip").on("click", function () {
   $("#div").empty()
   $("#newTitle").show();
+  $(".images-arrow").show()
   $(".header").attr("style", "display: none;")
 
   var zipcode = $(".re-zip").text().trim();
