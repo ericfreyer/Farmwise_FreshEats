@@ -15,7 +15,7 @@ $(document).ready(function () {
       ],
       view: new ol.View({
         center: ol.proj.fromLonLat([-73.935242, 40.730610]),
-        maxZoom: 20,
+        maxZoom: 19,
         zoom: 10
       })
     });

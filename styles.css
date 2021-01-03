@@ -1,6 +1,6 @@
 body {
   height: 100%;
-  background-image: url(./Images/farm-sunset-west-texas-landscape.JPG);
+  background-image: url(Images/farm-sunset-west-texas-landscape.jpg);
   font-family: lato, sans-serif;
   background-size: cover;
  background-repeat: no-repeat;
@@ -106,7 +106,7 @@ body {
   font-family: indie flower;
 }
 
-.nav-wrapper, nav, h4, h5{
+.nav-wrapper, nav, h4, h5, h3{
   font-family: indie flower;
 }
 
@@ -154,11 +154,10 @@ body {
   position: relative;
   /* animation-name: mymove;
   animation: mymove 2s;
-  animation-timing-function: linear;
-  
-}
+  animation-timing-function: linear;*/
+ }
 
-@keyframes mymove {
+/* @keyframes mymove {
   from {left: -700px;}
   to {left: 50px;}
 } */
