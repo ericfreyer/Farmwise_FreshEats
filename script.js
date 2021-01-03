@@ -142,7 +142,11 @@ $(document).ready(function () {
             })
         });
         pinDrop.setStyle(iconStyle)
+        var pinExtent = pinDrop.getSource().getExtent();
         map.addLayer(pinDrop);
+        if (pinDrop) {
+          map.getView().fit(pinExtent)
+        }
         });
       });
     });storeItem() 
@@ -229,7 +233,15 @@ $(".farm-list").on("click", function () {
     var coordArray = googleLink;
     var latLong = coordArray.match(geoReg);
     console.log(latLong);
-    var layer = new ol.layer.Vector({
+    var iconStyle = new ol.style.Style({
+      image: new ol.style.Icon({
+        anchor: [0.5, 46],
+        anchorXUnits: "fraction",
+        anchorYUnits: "pixels",
+        src: "Images/icon.png"
+      })
+    })
+    var pinDrop = new ol.layer.Vector({
       source: new ol.source.Vector({
           features: [
               new ol.Feature({
@@ -238,7 +250,13 @@ $(".farm-list").on("click", function () {
           ]
       })
   });
-  map.addLayer(layer);
+  var pinExtent = pinDrop.getSource().getExtent();
+  pinDrop.setStyle(iconStyle)
+  map.addLayer(pinDrop);
+  if (pinDrop) {
+    map.getView().fit(pinExtent)
+  }
+
   });
 });
 });
