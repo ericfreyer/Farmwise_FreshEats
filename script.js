@@ -10,9 +10,7 @@ $(document).ready(function () {
       target: 'map',
       layers: [
         new ol.layer.Tile({
-          source: new ol.source.OSM({
-            attributions: "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> Contributors. Icons by icon8.com"
-          })
+          source: new ol.source.OSM()
         })
       ],
       view: new ol.View({
