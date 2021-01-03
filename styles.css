@@ -106,7 +106,7 @@ body {
   font-family: indie flower;
 }
 
-.nav-wrapper, nav, h4, h5, h3{
+.nav-wrapper, nav, h4, h5{
   font-family: indie flower;
 }
 
@@ -161,4 +161,8 @@ body {
   from {left: -700px;}
   to {left: 50px;}
 } */
-
+ 
+.carouselimg{
+  width: 256;
+  height: 256;
+}
