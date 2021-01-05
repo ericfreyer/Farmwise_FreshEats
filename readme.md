@@ -31,7 +31,7 @@ Farmwise Fresh Eats is available to clone to a local intranet or on the world wi
 
 ## Link to deployed app
 
-[add content here once deployed]
+[Farmwise Fresheats](https://ericfreyer.github.io/Farmwise_FreshEats/)
 
 ## Credits
 
@@ -49,7 +49,7 @@ David Ready - Front End [Github Profile](https://github.com/dave-ready)
 
 MIT License
 
-Copyright (c) [2020-2021] [Farmwise Fresheats]
+Copyright (c) [2020-2021] [Farmwise Fresh Eats]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
