@@ -1,3 +1,4 @@
+
 ## Farmwise Fresh Eats
 
 Your one-stop shop for finding farmers markets near you. 
@@ -50,3 +51,4 @@ David Ready - Front End [Github Profile](https://github.com/dave-ready)
 
 -------
 Copyright [2021] [Farmwise Fresh Eats]
+
