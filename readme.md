@@ -31,7 +31,7 @@ Farmwise Fresh Eats is available to clone to a local intranet or on the world wi
 
 ## Link to deployed app
 
-[add content here once deployed]
+[Farmwise Fresheats](https://ericfreyer.github.io/Farmwise_FreshEats/)
 
 ## Credits
 
