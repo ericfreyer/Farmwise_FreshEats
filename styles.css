@@ -161,10 +161,6 @@ body {
   from {left: -700px;}
   to {left: 50px;}
 } */
- 
-.carouselimg{
-  width: 100%;
-  height: 200px;
+.navitem{
+  font-size: 18px;
 }
-
-

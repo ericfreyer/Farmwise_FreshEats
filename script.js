@@ -281,7 +281,8 @@ $(".farm-list").on("click", function () {
      newButton()
   }
 
-
+  $('.carousel').removeClass('initialized');
+  $('.carousel').carousel();
 })
 
 
