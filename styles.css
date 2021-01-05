@@ -150,3 +150,8 @@ body {
 .navitem{
   font-size: 18px;
 }
+
+.white-text{
+  padding-right: 5%;
+  padding-left: 5%;
+}
