@@ -1,10 +1,12 @@
 $(document).ready(function () {
+
+  //Sets controls/credits for map window
   var attribution = new ol.control.Attribution({
     collapsible: true,
   });
   var zoomSlider = new ol.control.ZoomSlider();
   
-  
+ //Creates OL map, sets view to center on NYC by default and defines minimum and maximum zoom levels 
   var map = new ol.Map({
       controls: ol.control.defaults({attribution: false}).extend([attribution]),
       target: 'map',
@@ -20,7 +22,7 @@ $(document).ready(function () {
       })
     });
     map.addControl(zoomSlider);
-
+  // Gets data from local storage, if any is available
   getItem();
   $("#farmersList").hide();
   $("#moreInfo").hide();
@@ -30,9 +32,9 @@ $(document).ready(function () {
 
   var zipsArry = []
 
+// Primary function; sets AJAX calls in motion, renders results
   function renderData() {
     var zipcode = $(".search-form").val().trim();
-    
     var queryURL =
       "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" +
       zipcode;
@@ -40,8 +42,7 @@ $(document).ready(function () {
     $.ajax({
       type: "GET",
       url: queryURL,
-    }).then(function (response) {
-      console.log(response);
+    }).then(function (response) {      
       $("#farmersList").show();
       $("#map").show();
       var div = $("<div>").attr("id", "div");
@@ -72,15 +73,9 @@ $(document).ready(function () {
           type: "GET",
           url: queryURL2,
         }).then(function (data) {
-            $("#moreInfo").show();
-          console.log(data);
-          
-          $("#list").on("click", function () {});
-          console.log(data.marketdetails.Address);
-          //address
-
-          $("#address").text(data.marketdetails.Address);
-          //google map link
+          $("#moreInfo").show();
+          $("#list").on("click", function () {});          
+          $("#address").text(data.marketdetails.Address); 
           var googleLink = data.marketdetails.GoogleLink;
           $("<a>", {
             text: "Map Link",
@@ -91,19 +86,16 @@ $(document).ready(function () {
               return false;
             },
           }).appendTo("#address");
-          //products
-
           $("#products").text(
             "What is available at this market: " + data.marketdetails.Products
           );
-          //Schedule
+          
           var Schedule = data.marketdetails.Schedule;
           var string = Schedule.split(";")[0];
           $("#schedule").text("Hours of Operation: " + string);
           var geoReg = /[-]?[\d]+[.][\d]*/g;
           var coordArray = googleLink;
-          var latLong = coordArray.match(geoReg);
-          console.log(latLong);
+          var latLong = coordArray.match(geoReg);         
           var iconStyle = new ol.style.Style({
             image: new ol.style.Icon({
               anchor: [0.5, 46],
@@ -112,6 +104,8 @@ $(document).ready(function () {
               src: "Images/icon.png"
             })
           })
+          
+          // Drops pin at parsed coordinates...
           var pinDrop = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
@@ -122,6 +116,8 @@ $(document).ready(function () {
             })
         });
         pinDrop.setStyle(iconStyle)
+
+        //... then auto-zooms to pin
         var pinExtent = pinDrop.getSource().getExtent();
         map.addLayer(pinDrop);
         if (pinDrop) {
@@ -131,7 +127,7 @@ $(document).ready(function () {
       });
     });
   }
-  
+  // First click listener: fires on search Button
   $(".waves-teal").on("click", function () {
   $("#div").empty()
   $(".images-arrow").show()
@@ -157,7 +153,7 @@ $(document).ready(function () {
   });
 
 
-//click stored zip buttons
+//Second click listener: fires on stored zip buttons
 $(".re-zip").on("click", function () {
   $("#div").empty()
   $("#newTitle").show();
