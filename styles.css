@@ -48,10 +48,6 @@ body {
 
 
 .card {
-  /*opacity: 0.9;
-  margin-top: 5px;
-  align: center;
-  width: 100%; */
   color: white;
   height: 100%;
   margin-top: 10%;
@@ -75,10 +71,6 @@ body {
   width: 100%;
   text-align: center;
 }
-
-/* .input-group-btn {
-  max-width: 38px;
-} */
 
 #search {
   height: 42px;
@@ -152,15 +144,9 @@ body {
   height: 25%;
   float: right;
   position: relative;
-  /* animation-name: mymove;
-  animation: mymove 2s;
-  animation-timing-function: linear;*/
  }
 
-/* @keyframes mymove {
-  from {left: -700px;}
-  to {left: 50px;}
-} */
+
 .navitem{
   font-size: 18px;
 }
