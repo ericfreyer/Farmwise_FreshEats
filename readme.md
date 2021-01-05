@@ -26,7 +26,7 @@ Farmwise Fresh Eats is available to clone to a local intranet or on the world wi
 
 ## Site Demo
 
-[ add content here once deployed ]
+![Deployed Demo](Images/pageDemo.gif)
 
 ## Link to deployed app
 
