@@ -163,6 +163,8 @@ body {
 } */
  
 .carouselimg{
-  width: 256;
-  height: 256;
+  width: 100%;
+  height: 200px;
 }
+
+
